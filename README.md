@@ -1,0 +1,1 @@
+A very simple Speed Dial plugin for Material Design Lite.
