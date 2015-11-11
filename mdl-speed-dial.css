@@ -1,0 +1,34 @@
+.mdl-speed-dial {
+  position: absolute;
+  text-align: right;
+  z-index: 9999;
+  margin: 0;
+}
+
+.mdl-speed-dial--bottom-fixed {
+  bottom: 28px;
+  right: 40px;
+}
+
+.mdl-speed-dial__options,
+.mdl-speed-dial__options--up {
+  display: none;
+  margin-bottom: 16px;
+}
+
+.mdl-speed-dial__options--down {
+  margin-top: 16px;
+}
+
+.mdl-speed-dial__option {
+  margin: 18px 8px 2px 8px;
+}
+
+.mdl-speed-dial__tooltip {
+  margin-right: 5px;
+  padding: 4px;
+  display: inline;
+  background: rgba(97, 97, 97, 0.9);
+  border-radius: 2px;
+  color: #fff;
+}
