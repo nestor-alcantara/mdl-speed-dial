@@ -70,11 +70,29 @@ Put the code inside the ```<header>``` element, as a direct child.
 ```
 
 ## Options
-| Modifier Class | Description |
-| -------------- | ----------- |
-| .mdl-speed-dial--bottom-fixed | Place the speed dial at the right-bottom corner of the page. |
-| .mdl-speed-dial--header-edge | Place the speed dial at the edge of the header/navbar. |
-| .mdl-speed-dial__tooltip--hidden | Hide the tooltip of the FAB option element and show it only when hover. |
+
+<table>
+	<thead>
+		<tr>
+			<th>Modifier Class</th>
+			<th>Description</th>
+		</tr>
+	</head>
+	<tbody>
+		<tr>
+			<td>.mdl-speed-dial--bottom-fixed</td>
+			<td>Place the speed dial at the right-bottom corner of the page.</td>
+		</tr>
+		<tr>
+			<td>.mdl-speed-dial--header-edge</td>
+			<td>Place the speed dial at the edge of the header/navbar.</td>
+		</tr>
+		<tr>
+			<td>.mdl-speed-dial__tooltip--hidden</td>
+			<td>Hide the tooltip of the FAB option element and show it only when hover.</td>
+		</tr>
+	</tbody>
+</table>
 
 ## Dependencies
 The only dependency is jQuery (besides MDL).
