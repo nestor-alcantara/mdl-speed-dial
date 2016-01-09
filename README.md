@@ -27,13 +27,14 @@ Use the `.mdl-speed-dial--bottom-fixed` class.
 		<div class="mdl-speed-dial__option">
 			<p class="mdl-speed-dial__tooltip">Option 1</p>
 			<a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-				<i class="material-icons">create</i>
+				<i class="material-icons">email</i>
 			</a>
 		</div>
 	</div>
 	<!-- Be sure to put the .mdl-speed-dial__main-fab button after the .mdl-speed-dial__options section -->
 	<button class="mdl-speed-dial__main-fab mdl-speed-dial__main-fab--spin mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-		<i class="material-icons">add</i>
+		<i class="material-icons mdl-speed-dial_main-fab-icon">add</i>
+		<i class="material-icons mdl-speed-dial_main-fab-icon mdl-speed-dial_main-fab-icon--hidden">create</i>
 	</button>
 </div>
 ```
@@ -96,8 +97,16 @@ Use the `.mdl-speed-dial--header-edge` class.
 			<td>.mdl-speed-dial__main-fab--spin</td>
 			<td>Rotate the main FAB when hover.</td>
 		</tr>
+		<tr>
+			<td>.mdl-speed-dial_main-fab-icon--hidden</td>
+			<td>Use this modifier when you want to replace the original icon of the main FAB when it's rotated. Add the class to the second icon inside `.mdl-speed-dial__main-fab` element.</td>
+		</tr>
 	</tbody>
 </table>
+
+You can see examples of the usage of these options in the previous section ("How to use it")
+
+
 
 ## Dependencies
 The only dependency is jQuery (besides MDL).
