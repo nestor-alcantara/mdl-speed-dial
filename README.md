@@ -8,8 +8,8 @@ MDL doesn't include a Speed Dial component (the FAB-based menu) by default, so t
 You can place your speed dial in two different places: at the right-bottom corner of the page and in the edge of the header/navbar.
 
 #### Right-bottom corner placed
+Use the `.mdl-speed-dial--bottom-fixed` class.
 ```html
-<!-- Use the .mdl-speed-dial--bottom-fixed class -->
 <div class="mdl-speed-dial mdl-speed-dial--bottom-fixed">
 	<div class="mdl-speed-dial__options">
 		<div class="mdl-speed-dial__option">
@@ -32,15 +32,16 @@ You can place your speed dial in two different places: at the right-bottom corne
 		</div>
 	</div>
 	<!-- Be sure to put the .mdl-speed-dial__main-fab button after the .mdl-speed-dial__options section -->
-	<button class="mdl-speed-dial__main-fab mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+	<button class="mdl-speed-dial__main-fab mdl-speed-dial__main-fab--spin mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
 		<i class="material-icons">add</i>
 	</button>
 </div>
 ```
 ### Header edge placed
 Put the code inside the ```<header>``` element, as a direct child.
+
+Use the `.mdl-speed-dial--header-edge` class.
 ```html
-<!-- Use the .mdl-speed-dial--header-edge class -->
 <div class="mdl-speed-dial mdl-speed-dial--header-edge">
   <!-- Be sure to put the .mdl-speed-dial__main-fab button before the .mdl-speed-dial__options section -->
 	<button class="mdl-speed-dial__main-fab mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
@@ -90,6 +91,10 @@ Put the code inside the ```<header>``` element, as a direct child.
 		<tr>
 			<td>.mdl-speed-dial__tooltip--hidden</td>
 			<td>Hide the tooltip of the FAB option element and show it only when hover.</td>
+		</tr>
+		<tr>
+			<td>.mdl-speed-dial__main-fab--spin</td>
+			<td>Rotate the main FAB when hover.</td>
 		</tr>
 	</tbody>
 </table>
