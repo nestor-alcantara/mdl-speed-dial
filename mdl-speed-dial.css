@@ -2,10 +2,6 @@ header {
 	position: relative;
 }
 
-.hide {
-	display: none;
-}
-
 .mdl-speed-dial {
 	position: absolute;
 	text-align: right;
@@ -39,4 +35,8 @@ header {
 	background: rgba(97, 97, 97, 0.9);
 	border-radius: 2px;
 	color: #fff;
+}
+
+.mdl-speed-dial_main-fab-icon--hidden {
+	display: none;
 }
