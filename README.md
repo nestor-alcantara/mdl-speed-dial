@@ -1,8 +1,10 @@
 # Speed Dial For Material Design Lite
 
-This plugin adds a very simple Speed Dial element to any project using MDL.
+This plugin adds a Speed Dial component to any project using MDL.
 
-MDL doesn't include a Speed Dial component (the FAB-based menu) by default, so this plugin can be used to add that missing element to the library.
+MDL doesn't include a Speed Dial component (the FAB-based menu) by default, so this plugin can be used to add that missing element to your project.
+
+## [Demo](http://nesgael.github.io/mdl-speed-dial/)
 
 ## How to use it
 You can place your speed dial in two different places: at the right-bottom corner of the page and in the edge of the header/navbar.
