@@ -1,0 +1,263 @@
+<html>
+  <head>
+    <title>MDL Speed Dial Plugin</title>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="mdl-speed-dial.css">
+    <link rel="stylesheet" href="prism/prism.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Speed Dial for MDL</span>
+          <div class="mdl-layout-spacer"></div>
+        </div>
+        <div class="mdl-speed-dial mdl-speed-dial--header-edge">
+          <button class="mdl-speed-dial__main-fab mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+            <i class="material-icons">add</i>
+          </button>
+          <div class="mdl-speed-dial__options">
+            <div class="mdl-speed-dial__option">
+              <p class="mdl-speed-dial__tooltip mdl-speed-dial__tooltip--hidden">Option 3</p>
+              <a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                <i class="material-icons">folder</i>
+              </a>
+            </div>
+            <div class="mdl-speed-dial__option">
+              <p class="mdl-speed-dial__tooltip mdl-speed-dial__tooltip--hidden">Option 2</p>
+              <a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                <i class="material-icons">attach_file</i>
+              </a>
+            </div>
+            <div class="mdl-speed-dial__option">
+              <p class="mdl-speed-dial__tooltip mdl-speed-dial__tooltip--hidden">Option 1</p>
+              <a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                <i class="material-icons">create</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="mdl-grid description">
+          <div class="mdl-cell mdl-cell--3-col"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Speed Dial For Material Design Lite</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>This plugin adds a Speed Dial component to any project using MDL.</p>
+              <p>MDL doesn't include a Speed Dial component (the FAB-based menu) by default, so this plugin can be used to add that missing element to your project.</p>
+              <p>You can see at the right side of this page two examples of this awesome component.</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <!-- <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Right-Bottom</a>
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Header edge</a> -->
+              <a href="https://github.com/nesgael/mdl-speed-dial/archive/master.zip" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Download</a>
+              <a href="https://github.com/nesgael/mdl-speed-dial" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Source Code</a>
+              <a href="#options" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Options</a>
+              <a href="#dependencies" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Dependencies</a>
+              <a href="#license" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">License</a>
+            </div>
+          </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col"></div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <h4>How to use it</h4>
+            <p>Include the JS and CSS files in your project.</p>
+            <pre>
+              <code class="language-markup">
+                &lt;link rel="stylesheet" href="mdl-speed-dial.css"&gt;
+                &lt;script src="mdl-speed-dial.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col"></div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <p>You can place the speed dial in two different places: at the right-bottom corner of the page and in the edge of the header/navbar.</p>  
+          </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Right-bottom corner placed</h2>
+            </div>
+            <div class="mdl-card__supporting-text code-block">
+              <div class="code-notes">
+                <p>Use the <code>.mdl-speed-dial--bottom-fixed</code> class.</p>
+              </div>
+              <pre>
+                <code class="language-markup">
+&lt;div class="mdl-speed-dial mdl-speed-dial--bottom-fixed"&gt;
+  &lt;div class="mdl-speed-dial__options"&gt;
+    &lt;div class="mdl-speed-dial__option"&gt;
+      &lt;p class="mdl-speed-dial__tooltip"&gt;Option 3&lt;/p&gt;
+      &lt;a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"&gt;
+        &lt;i class="material-icons"&gt;folder&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="mdl-speed-dial__option"&gt;
+      &lt;p class="mdl-speed-dial__tooltip"&gt;Option 2&lt;/p&gt;
+      &lt;a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"&gt;
+        &lt;i class="material-icons"&gt;attach_file&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="mdl-speed-dial__option"&gt;
+      &lt;p class="mdl-speed-dial__tooltip"&gt;Option 1&lt;/p&gt;
+      &lt;a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"&gt;
+        &lt;i class="material-icons"&gt;email&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Be sure to put the .mdl-speed-dial__main-fab button after the .mdl-speed-dial__options section --&gt;
+  &lt;button class="mdl-speed-dial__main-fab mdl-speed-dial__main-fab--spin mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"&gt;
+    &lt;i class="material-icons mdl-speed-dial_main-fab-icon"&gt;add&lt;/i&gt;
+    &lt;i class="material-icons mdl-speed-dial_main-fab-icon mdl-speed-dial_main-fab-icon--hidden"&gt;create&lt;/i&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Header edge placed</h2>
+            </div>
+            <div class="mdl-card__supporting-text code-block">
+              <div class="code-notes">
+                <p>Put the code inside the <code>&lt;header&gt;</code> element, as a direct child.</p>
+                <p>Use the <code>.mdl-speed-dial--header-edge</code> class.</p>
+              </div>
+              <pre>
+                <code class="language-markup">
+&lt;div class="mdl-speed-dial mdl-speed-dial--header-edge"&gt;
+  &lt;!-- Be sure to put the .mdl-speed-dial__main-fab button before the .mdl-speed-dial__options section --&gt;
+    &lt;button class="mdl-speed-dial__main-fab mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"&gt;
+      &lt;i class="material-icons"&gt;add&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;div class="mdl-speed-dial__options"&gt;
+      &lt;div class="mdl-speed-dial__option"&gt;
+        &lt;p class="mdl-speed-dial__tooltip"&gt;Option 1&lt;/p&gt;
+        &lt;a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"&gt;
+          &lt;i class="material-icons"&gt;folder&lt;/i&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="mdl-speed-dial__option"&gt;
+        &lt;p class="mdl-speed-dial__tooltip"&gt;Option 2&lt;/p&gt;
+        &lt;a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"&gt;
+          &lt;i class="material-icons"&gt;attach_file&lt;/i&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="mdl-speed-dial__option"&gt;
+        &lt;p class="mdl-speed-dial__tooltip"&gt;Option 3&lt;/p&gt;
+        &lt;a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"&gt;
+          &lt;i class="material-icons"&gt;create&lt;/i&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div id="options" class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col"></div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <h4>Options</h4>
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+              <thead>
+                <tr>
+                  <th class="mdl-data-table__cell--non-numeric">Modifier Class</th>
+                  <th class="mdl-data-table__cell--non-numeric">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric"><code>.mdl-speed-dial--bottom-fixed</code></td>
+                  <td class="mdl-data-table__cell--non-numeric">Place the speed dial at the right-bottom corner of the page.</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric"><code>.mdl-speed-dial--header-edge</code></td>
+                  <td class="mdl-data-table__cell--non-numeric">Place the speed dial at the edge of the header/navbar.</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric"><code>.mdl-speed-dial__tooltip--hidden</code></td>
+                  <td class="mdl-data-table__cell--non-numeric">Hide the tooltip of the FAB option element and show it only when hover.</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric"><code>.mdl-speed-dial__main-fab--spin</code></td>
+                  <td class="mdl-data-table__cell--non-numeric">Rotate the main FAB when hover.</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric"><code>.mdl-speed-dial_main-fab-icon--hidden</code></td>
+                  <td class="mdl-data-table__cell--non-numeric">Use this modifier when you want to replace the original icon of the main FAB when it's rotated. Add the class to the second icon inside <code>.mdl-speed-dial__main-fab</code> element.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="usage-examples-text">You can see examples of the usage of these options in the previous section ("How to use it").</p>
+          </div>
+        </div>
+        <div id="dependencies" class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col"></div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <h4>Dependencies</h4>
+            <p>The only dependency is <a href="https://jquery.com/">jQuery</a> (besides <a href="http://www.getmdl.io/">MDL</a>).</p>
+          </div>
+        </div>
+        <div id="license" class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col"></div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <h4>License</h4>
+            <p>Licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+          </div>
+        </div>
+        <footer class="mdl-mini-footer">
+          <!-- <div class="mdl-logo"></div> -->
+          <p>Copyright (c) 2016 <a href="https://github.com/nesgael">Nestor Alcantara</a></p>
+          <p>nestor@alcantara.io</p>
+        </footer>
+      </main>
+    </div>
+    <div class="mdl-speed-dial mdl-speed-dial--bottom-fixed">
+      <div class="mdl-speed-dial__options">
+        <div class="mdl-speed-dial__option">
+          <p class="mdl-speed-dial__tooltip">Option 3</p>
+          <a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+            <i class="material-icons">folder</i>
+          </a>
+        </div>
+        <div class="mdl-speed-dial__option">
+          <p class="mdl-speed-dial__tooltip">Option 2</p>
+          <a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+            <i class="material-icons">attach_file</i>
+          </a>
+        </div>
+        <div class="mdl-speed-dial__option">
+          <p class="mdl-speed-dial__tooltip">Option 1</p>
+          <a href="#" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+            <i class="material-icons">email</i>
+          </a>
+        </div>
+      </div>
+      <button class="mdl-speed-dial__main-fab mdl-speed-dial__main-fab--spin mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+        <i class="material-icons mdl-speed-dial_main-fab-icon">add</i>
+        <i class="material-icons mdl-speed-dial_main-fab-icon mdl-speed-dial_main-fab-icon--hidden">create</i>
+      </button>
+    </div>
+    
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="mdl-speed-dial.js"></script>
+    <script src="prism/prism.js"></script>
+  </body>
+</html>
