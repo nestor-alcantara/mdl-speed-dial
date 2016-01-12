@@ -2,6 +2,10 @@ header nav.mdl-navigation {
 	margin-right: 100px !important; 
 }
 
+.add-files-code .language-markup {
+	text-align: center;
+}
+
 .description {
 	margin-top: 30px;
 }

@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>MDL Speed Dial Plugin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="mdl-speed-dial.css">
@@ -42,8 +44,8 @@
       </header>
       <main class="mdl-layout__content">
         <div class="mdl-grid description">
-          <div class="mdl-cell mdl-cell--3-col"></div>
-          <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
             <div class="mdl-card__title">
               <h2 class="mdl-card__title-text">Speed Dial For Material Design Lite</h2>
             </div>
@@ -53,8 +55,6 @@
               <p>You can see at the right side of this page two examples of this awesome component.</p>
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <!-- <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Right-Bottom</a>
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Header edge</a> -->
               <a href="https://github.com/nesgael/mdl-speed-dial/archive/master.zip" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Download</a>
               <a href="https://github.com/nesgael/mdl-speed-dial" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Source Code</a>
               <a href="#options" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Options</a>
@@ -63,28 +63,28 @@
             </div>
           </div>
         </div>
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--3-col"></div>
-          <div class="mdl-cell mdl-cell--6-col">
+        <div class="mdl-grid add-files-code">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
             <h4>How to use it</h4>
             <p>Include the JS and CSS files in your project.</p>
             <pre>
               <code class="language-markup">
-                &lt;link rel="stylesheet" href="mdl-speed-dial.css"&gt;
-                &lt;script src="mdl-speed-dial.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="mdl-speed-dial.css"&gt;
+&lt;script src="mdl-speed-dial.js"&gt;&lt;/script&gt;
               </code>
             </pre>
           </div>
         </div>
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--3-col"></div>
-          <div class="mdl-cell mdl-cell--6-col">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
             <p>You can place the speed dial in two different places: at the right-bottom corner of the page and in the edge of the header/navbar.</p>  
           </div>
         </div>
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--3-col"></div>
-          <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
             <div class="mdl-card__title">
               <h2 class="mdl-card__title-text">Right-bottom corner placed</h2>
             </div>
@@ -127,8 +127,8 @@
           </div>
         </div>
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--3-col"></div>
-          <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
             <div class="mdl-card__title">
               <h2 class="mdl-card__title-text">Header edge placed</h2>
             </div>
@@ -171,8 +171,8 @@
           </div>
         </div>
         <div id="options" class="mdl-grid">
-          <div class="mdl-cell mdl-cell--3-col"></div>
-          <div class="mdl-cell mdl-cell--6-col">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
             <h4>Options</h4>
             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
               <thead>
@@ -208,15 +208,15 @@
           </div>
         </div>
         <div id="dependencies" class="mdl-grid">
-          <div class="mdl-cell mdl-cell--3-col"></div>
-          <div class="mdl-cell mdl-cell--6-col">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
             <h4>Dependencies</h4>
             <p>The only dependency is <a href="https://jquery.com/">jQuery</a> (besides <a href="http://www.getmdl.io/">MDL</a>).</p>
           </div>
         </div>
         <div id="license" class="mdl-grid">
-          <div class="mdl-cell mdl-cell--3-col"></div>
-          <div class="mdl-cell mdl-cell--6-col">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--4-col-phone">
             <h4>License</h4>
             <p>Licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
           </div>
