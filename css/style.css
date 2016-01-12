@@ -23,6 +23,10 @@ pre.language-markup {
 	margin: 0 20px;
 }
 
+.options-table {
+	overflow: auto;
+}
+
 table > tbody > tr > td:nth-child(2) {
 	white-space: normal;
 	padding: 12px 18px;
