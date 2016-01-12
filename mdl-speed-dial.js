@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$('.mdl-speed-dial__tooltip--hidden').hide();
 });
 
-function rotateElement(el, deg, duration){
+function rotateElement(el, deg, duration) {
 	$(el).stop().animate({ rotation: deg }, {
 		duration: duration,
 		step: function(now, fx) {
@@ -28,6 +28,7 @@ function openFAB(e) {
 		icons = $btn.children('i'),
 		$firstIcon = $(icons[0]),
 		$secondIcon = $(icons[1]),
+		isFirstIconPlusSign = $firstIcon.html() == 'add' ? true : false,
 		hiddenClassName = 'mdl-speed-dial_main-fab-icon--hidden',
 		rotate = $btn.hasClass('mdl-speed-dial__main-fab--spin');
 
@@ -35,8 +36,13 @@ function openFAB(e) {
 		$speedDialOptions.fadeIn('fast');
 
 		if (rotate) {
-			rotateElement($btn, 360, 300);
-
+			if (icons.length == 1 && isFirstIconPlusSign) {
+				console.log('Rotate 45 deg');
+				rotateElement($btn, 45, 100);
+			} else {
+				rotateElement($btn, 360, 300);
+			}
+			
 			if (icons.length == 2) {
 				if ($firstIcon.hasClass(hiddenClassName)) {
 					$firstIcon.fadeIn('fast').removeClass(hiddenClassName);
