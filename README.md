@@ -35,8 +35,8 @@ Use the `.mdl-speed-dial--bottom-fixed` class.
 	</div>
 	<!-- Be sure to put the .mdl-speed-dial__main-fab button after the .mdl-speed-dial__options section -->
 	<button class="mdl-speed-dial__main-fab mdl-speed-dial__main-fab--spin mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-		<i class="material-icons mdl-speed-dial_main-fab-icon">add</i>
-		<i class="material-icons mdl-speed-dial_main-fab-icon mdl-speed-dial_main-fab-icon--hidden">create</i>
+		<i class="material-icons mdl-speed-dial_main-fab-icon mdl-speed-dial_main-fab-icon--primary">add</i>
+		<i class="material-icons mdl-speed-dial_main-fab-icon mdl-speed-dial_main-fab-icon--secondary">create</i>
 	</button>
 </div>
 ```
@@ -48,7 +48,7 @@ Use the `.mdl-speed-dial--header-edge` class.
 <div class="mdl-speed-dial mdl-speed-dial--header-edge">
   <!-- Be sure to put the .mdl-speed-dial__main-fab button before the .mdl-speed-dial__options section -->
 	<button class="mdl-speed-dial__main-fab mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-		<i class="material-icons">add</i>
+		<i class="material-icons mdl-speed-dial_main-fab-icon">add</i>
 	</button>
 	<div class="mdl-speed-dial__options">
 		<div class="mdl-speed-dial__option">
@@ -100,9 +100,13 @@ Use the `.mdl-speed-dial--header-edge` class.
 			<td>Rotate the main FAB when hover.</td>
 		</tr>
 		<tr>
-			<td>.mdl-speed-dial_main-fab-icon--hidden</td>
-			<td>Use this modifier when you want to replace the original icon of the main FAB when it's rotated. Add the class to the second icon inside `.mdl-speed-dial__main-fab` element.</td>
-		</tr>
+                	<td class="mdl-data-table__cell--non-numeric"><code>.mdl-speed-dial_main-fab-icon--primary</code></td>
+                	<td class="mdl-data-table__cell--non-numeric">Use this modifier when you want to switch between two icons when hover and un-hover the main FAB. Add the class to the primary icon (shown on un-hover state) inside the <code>.mdl-speed-dial__main-fab</code> element.</td>
+                </tr>
+                <tr>
+                	<td class="mdl-data-table__cell--non-numeric"><code>.mdl-speed-dial_main-fab-icon--secondary</code></td>
+                	<td class="mdl-data-table__cell--non-numeric">Use this modifier when you want to switch between two icons when hover and un-hover the main FAB. Add the class to the secondary icon (shown on hover state) inside the <code>.mdl-speed-dial__main-fab</code> element.</td>
+                </tr>
 	</tbody>
 </table>
 
