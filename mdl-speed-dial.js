@@ -10,6 +10,7 @@ $(document).ready(function() {
 	$('.mdl-speed-dial').mouseleave(closeFAB);
 	$('.mdl-speed-dial__option').hover(showFABTooltip, hideFABTooltip);
 	$('.mdl-speed-dial__tooltip--hidden').hide();
+	$('.mdl-speed-dial_main-fab-icon--secondary').hide();
 });
 
 function rotateElement(el, deg, duration) {
@@ -25,32 +26,30 @@ function openFAB(e) {
 	var $btn = $(this),
 		$speedDialOptions = $btn.siblings('.mdl-speed-dial__options'),
 		isSpeedDialOptionsHidden = $speedDialOptions.css('display') == 'none' ? true : false,
-		icons = $btn.children('i'),
-		$firstIcon = $(icons[0]),
-		$secondIcon = $(icons[1]),
-		isFirstIconPlusSign = $firstIcon.html() == 'add' ? true : false,
-		hiddenClassName = 'mdl-speed-dial_main-fab-icon--hidden',
+		$primaryIcon = $btn.children('.mdl-speed-dial_main-fab-icon--primary'),
+		$secondaryIcon = $btn.children('.mdl-speed-dial_main-fab-icon--secondary'),
+		isPrimaryIconNull = $primaryIcon.length > 0 ? false : true,
+		isSecondaryIconNull = $secondaryIcon.length > 0 ? false : true,
+		$primaryIcon = isPrimaryIconNull ? $btn.children('.mdl-speed-dial_main-fab-icon') : $primaryIcon,
+		isPrimaryIconPlusSign = $primaryIcon.html() == 'add' ? true : false,
+		rotationDegrees = 360,
+		rotationSpeed = 300,
 		rotate = $btn.hasClass('mdl-speed-dial__main-fab--spin');
 
 	if (isSpeedDialOptionsHidden) {
 		$speedDialOptions.fadeIn('fast');
 
 		if (rotate) {
-			if (icons.length == 1 && isFirstIconPlusSign) {
-				console.log('Rotate 45 deg');
-				rotateElement($btn, 45, 100);
-			} else {
-				rotateElement($btn, 360, 300);
+			if (isSecondaryIconNull && isPrimaryIconPlusSign) {
+				rotationDegrees = 45;
+				rotationSpeed = 100;
 			}
 			
-			if (icons.length == 2) {
-				if ($firstIcon.hasClass(hiddenClassName)) {
-					$firstIcon.fadeIn('fast').removeClass(hiddenClassName);
-					$secondIcon.fadeOut('fast').addClass(hiddenClassName);
-				} else if ($secondIcon.hasClass(hiddenClassName)) {
-					$firstIcon.fadeOut('fast').addClass(hiddenClassName);
-					$secondIcon.fadeIn('fast').removeClass(hiddenClassName);
-				}
+			rotateElement($btn, rotationDegrees, rotationSpeed);
+
+			if (!isPrimaryIconNull && !isSecondaryIconNull) {
+				$primaryIcon.fadeOut('fast');
+				$secondaryIcon.fadeIn('fast');
 			}
 		}
 	}
@@ -58,30 +57,21 @@ function openFAB(e) {
 
 function closeFAB(e) {
 	var $btn = $(this).children('.mdl-speed-dial__main-fab'),
-		icons = $btn.children('i'),
-		$firstIcon = $(icons[0]),
-		$secondIcon = $(icons[1]),
-		hiddenClassName = 'mdl-speed-dial_main-fab-icon--hidden',
+		$primaryIcon = $btn.children('.mdl-speed-dial_main-fab-icon--primary') || $btn.children('.mdl-speed-dial_main-fab-icon'),
+		$secondaryIcon = $btn.children('.mdl-speed-dial_main-fab-icon--secondary'),
+		isPrimaryIconNull = $primaryIcon.length > 0 ? false : true,
+		isSecondaryIconNull = $secondaryIcon.length > 0 ? false : true,
+		$primaryIcon = isPrimaryIconNull ? $btn.children('.mdl-speed-dial_main-fab-icon') : $primaryIcon,
 		rotate = $btn.hasClass('mdl-speed-dial__main-fab--spin');
 
 	$(this).children('.mdl-speed-dial__options').fadeOut('fast');
 
 	if (rotate) {
-		$btn.stop().animate({ rotation: 0 }, {
-			duration: 100,
-			step: function(now, fx) {
-				$(this).css({ "transform": "rotate(" + now + "deg)" });
-			}
-		});
+		rotateElement($btn, 0, 100);
 
-		if (icons.length == 2) {
-			if ($firstIcon.hasClass(hiddenClassName)) {
-				$firstIcon.fadeIn('fast').removeClass(hiddenClassName);
-				$secondIcon.fadeOut('fast').addClass(hiddenClassName);
-			} else if ($secondIcon.hasClass(hiddenClassName)) {
-				$firstIcon.fadeOut('fast').addClass(hiddenClassName);
-				$secondIcon.fadeIn('fast').removeClass(hiddenClassName);
-			}
+		if (!isPrimaryIconNull && !isSecondaryIconNull) {
+			$primaryIcon.fadeIn('fast');
+			$secondaryIcon.fadeOut('fast');
 		}
 	}
 }
